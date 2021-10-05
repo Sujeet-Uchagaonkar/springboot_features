@@ -72,6 +72,8 @@ AWS : Swagger file for AWS, Amazon S3 bucket
 
 Jasper
 
+NoSQL
 
+GraphQL
 
 
