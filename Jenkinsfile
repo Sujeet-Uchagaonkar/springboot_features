@@ -1,22 +1,24 @@
 pipeline {
     agent any
 
+    
     stages {
-        stage('projectbBuild') {
+        stage('Build') {
+            agent { label 'gradle' }
             steps {
-                //container('gradle') {
-                echo 'Building Application......'
-                
-                // Get some code from a GitHub repository
-                // git 'https://github.com/Sujeet-Uchagaonkar/springboot_features.git'
-                
-                
-                //sh "gradle clean build"
-                bat "gradle clean build"
-               // }
+                //checkout scm
+                //sh "env"
+                sh "gradle bootRepackage --stacktrace"
+               // sh 'jarFile=`ls build/libs | grep -v original` && mkdir -p ocp/deployments && cp build/libs/$jarFile ocp/deployments/'
             }
         }
-    }
+    
+    
+    
+    
+    
+    
+    
 }
 
 
