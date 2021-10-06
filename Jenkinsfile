@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+      label "jenkins-gradle"
+    }
 
     stages {
         stage('projectbBuild') {
