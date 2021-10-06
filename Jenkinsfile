@@ -1,6 +1,6 @@
 pipeline {
     agent {
-      label "jenkins-gradle"
+      label "master"
     }
 
     stages {
