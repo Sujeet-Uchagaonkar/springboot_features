@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('projectbBuild') {
             steps {
-                container('gradle') {
+                //container('gradle') {
                 echo 'Building Application......'
                 
                 // Get some code from a GitHub repository
@@ -13,7 +13,7 @@ pipeline {
                 
                 sh "clean build"
                 //bat "gradle clean build"
-                }
+               // }
             }
         }
     }
