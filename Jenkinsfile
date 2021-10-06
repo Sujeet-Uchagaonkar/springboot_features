@@ -11,8 +11,8 @@ pipeline {
                 // git 'https://github.com/Sujeet-Uchagaonkar/springboot_features.git'
                 
                 
-                sh "gradle clean build"
-                //bat "gradle clean build"
+                //sh "gradle clean build"
+                bat "gradle clean build"
                // }
             }
         }
