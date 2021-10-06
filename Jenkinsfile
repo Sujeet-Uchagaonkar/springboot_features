@@ -1,11 +1,10 @@
 pipeline {
-    agent {
-      label "Built-In Node"
-    }
+    agent any
 
     stages {
         stage('projectbBuild') {
             steps {
+                container('gradle') {
                 echo 'Building Application......'
                 
                 // Get some code from a GitHub repository
@@ -14,6 +13,7 @@ pipeline {
                 
                 sh "clean build"
                 //bat "gradle clean build"
+                }
             }
         }
     }
