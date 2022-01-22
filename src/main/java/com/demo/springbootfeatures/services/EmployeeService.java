@@ -34,4 +34,9 @@ public class EmployeeService {
 		
 		//return empValid;
 	}
+
+	public String getEmployees() {
+	
+		return "This is Employee Service AOP demo.. use /sample, /null, /sayhello, /invalid etc. endpoints to explore...";
+	}
 }

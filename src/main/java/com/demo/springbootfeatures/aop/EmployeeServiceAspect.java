@@ -1,6 +1,7 @@
 package com.demo.springbootfeatures.aop;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
@@ -76,4 +77,15 @@ public class EmployeeServiceAspect {
 		System.out.println("After throwing invalid emp exception with exception msg : "+ex.getMessage());
 	}
 	
+	
+	@Pointcut(value="execution(* com.demo.springbootfeatures.services.EmployeeService.getEmployees())")
+	public void getEmployeesPointcut(){
+	}
+	
+	@Around(value="getEmployeesPointcut()")
+	public void aroundGetEmployees(ProceedingJoinPoint pjp) throws Throwable{
+		System.out.println("Around getEmployees - Before");
+		pjp.proceed();
+		System.out.println("Around getEmployees - After");
+	}
 }
