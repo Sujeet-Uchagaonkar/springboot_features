@@ -1,14 +1,14 @@
 # Spring Boot Features 
 
 
-(* = DONE)
+(# = DONE)
 
 
 This POC/Demo will cover basic + advanced concepts of Spring boot which includes:
 
 
 
-*AOP
+#AOP
 
 Exception handling using @ExceptionHandler & @ControllerAdvice
 
