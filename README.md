@@ -65,15 +65,15 @@ SOAP web service
 
 JWT, Okta
 
-Oauth2
+Oauth2, SAML
 
 Spring gateway API
 
 Pipeline CICD using Jenkins & Concourse
 
 Deploy to PCF & GCP
-
 AWS : Swagger file for AWS, Amazon S3 bucket
+GCP & Azure
 
 Jasper
 
@@ -81,5 +81,5 @@ NoSQL
 
 GraphQL
 
- 
+OData
 
